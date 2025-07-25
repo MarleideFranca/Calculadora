@@ -13,7 +13,7 @@ public class CadastroFornecedorService {
 
     public void cadastrarFornecedor(Empresa fornecedor) {
         if (cnpjsCadastrados.contains(fornecedor.getCnpj())) {
-            throw new IllegalArgumentException("Fornecedor com esse CNPJ já está cadastrado.");
+            throw new IllegalArgumentException("Fornecedor já está cadastrado.");
         }
         cnpjsCadastrados.add(fornecedor.getCnpj());
     }

@@ -10,7 +10,7 @@ public class CadastroUsuarioService {
 
     public void cadastrar(Usuario usuario) {
         if (usuariosCadastrados.containsKey(usuario.getCpf())) {
-            throw new IllegalArgumentException("Usuário com este CPF já está cadastrado.");
+            throw new IllegalArgumentException("Usuário com este E-mail e CPF já está cadastrado!");
         }
         usuariosCadastrados.put(usuario.getCpf(), usuario);
     }

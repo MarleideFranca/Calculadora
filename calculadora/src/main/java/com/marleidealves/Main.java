@@ -1,12 +1,17 @@
 package com.marleidealves;
 
+
 public class Main {
     public static void main(String[] args) {
-        CalculadoraFrete frete = new CalculadoraFrete(80.0, 100.0);
-        Usuario usuario = new Usuario("Marleide", "marleide@email.com", "12345678901", frete);
+        // Criando uma categoria de produto com fator de ajuste
+        CategoriaProduto categoria = new CategoriaProduto("Eletrônicos", 1.2);
 
-        double valorFrete = usuario.calcularFrete();
-        System.out.println("Usuário: " + usuario.getNome());
-        System.out.println("Frete calculado: R$ " + valorFrete);
+        // Criando a calculadora de frete com a categoria
+        CalculadoraFrete calculadora = new CalculadoraFrete(80.0, 100.0, categoria);
+
+        // Exibindo o valor do frete
+        double frete = calculadora.calcularFrete();
+        System.out.println("Valor do frete: R$ " + frete);
     }
 }
+
